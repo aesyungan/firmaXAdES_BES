@@ -1,7 +1,7 @@
 # firmaXAdES_BES
- libreria creada para firmar xml en el formato de sri Ecuador
+ libreria creada para firmar en xml en el formato de sri Ecuador
 
-## disponible para maven
+## Disponible para maven
 Step 1. Add the JitPack repository to your build file
 ```
         <repositories>
@@ -20,6 +20,7 @@ Step 2. Add the dependency
 	</dependency>
 ```
 para gradle y otros mas
+#
 [![](https://jitpack.io/v/aesyungan/firmaXAdES_BES.svg)](https://jitpack.io/#aesyungan/firmaXAdES_BES)
-## se basa en:
+#### Basado en:
 ##### https://web.archive.org/web/20151108060654/http://oficinavirtual.mityc.es:80/componentes/mityclibxades/index.html
