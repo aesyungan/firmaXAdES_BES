@@ -71,7 +71,7 @@
 
     -->
     
-   <!-- <target name="-post-jar">
+    <target name="-post-jar">
         <property name="store.jar.name" value="firmaDigital2"/>
 
         <property name="store.dir" value="dist"/>
@@ -96,5 +96,5 @@
         <delete file="${store.dir}/temp_final.jar"/>
         <delete dir="${store.dir}/lib"/>
         <delete file="${store.dir}/README.TXT"/>
-    </target>-->
+    </target>
 </project>
