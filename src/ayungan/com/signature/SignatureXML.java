@@ -42,14 +42,14 @@ import es.mityc.firmaJava.libreria.xades.FirmaXML;
  */
 public abstract class SignatureXML {
 
-	private InputStream pathSignature;
+	private byte[] pathSignature;
 	private String passSignature;
 
-	public InputStream getPathSignature() {
+	public byte[] getPathSignature() {
 		return this.pathSignature;
 	}
 
-	public void setPathSignature(InputStream pathSignature) {
+	public void setPathSignature(byte[] pathSignature) {
 		this.pathSignature = pathSignature;
 	}
 
@@ -146,7 +146,7 @@ public abstract class SignatureXML {
 
 		try {
 			ks = KeyStore.getInstance("PKCS12");
-			ks.load(pathSignature, this.passSignature.toCharArray());
+			ks.load(new ByteArrayInputStream(this.pathSignature), this.passSignature.toCharArray());
 		} catch (KeyStoreException e) {
 			throw new IOException("Error: " + e.getMessage());
 		} catch (NoSuchAlgorithmException e) {

@@ -31,7 +31,7 @@ public class SignatureXAdESBES extends SignatureXML {
 		this.dataOriginal = dataOriginal;
 	}
 
-	public static byte[] firmarByteData(byte[] xmlOriginal, InputStream pathSignature, String passSignature)
+	public static byte[] firmarByteData(byte[] xmlOriginal, byte[] pathSignature, String passSignature)
 			throws CertificateException, IOException {
 		SignatureXAdESBES signature = new SignatureXAdESBES(xmlOriginal);
 		signature.setPassSignature(passSignature);

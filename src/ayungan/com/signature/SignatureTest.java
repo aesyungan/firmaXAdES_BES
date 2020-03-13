@@ -23,14 +23,13 @@ public class SignatureTest {
 		System.out.println("Ruta del XML de entrada: " + xmlPath);
 		System.out.println("Ruta Certificado: " + pathSignature);
 		System.out.println("Clave del Certificado: " + passSignature);
-		File initialFile = new File(pathSignature);
 		try {
-			InputStream targetStream = new FileInputStream(initialFile);
 
-			byte[] bxmlOriginal = ConvertFile.readBytesFromFile(xmlPath);
+			byte[] bxmlOriginal = ConvertFile.readBytesFromFile(xmlPath);	
+			byte[] cert = ConvertFile.readBytesFromFile(pathSignature);
 			// ConvertFile.saveBytes(bxmlOriginal, "E:\\dacturasaveByte.xml");
-			byte[] data2 = SignatureXAdESBES.firmarByteData(bxmlOriginal, targetStream, passSignature);
-			ConvertFile.saveBytes(data2, "E:\\fatura_sign12.xml");
+			byte[] data2 = SignatureXAdESBES.firmarByteData(bxmlOriginal, cert, passSignature);
+			ConvertFile.saveBytes(data2, "D:\\fatura_sign12.xml");
 		} catch (Exception e) {
 			System.out.println("Error: " + e);
 		}
